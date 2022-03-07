@@ -13,6 +13,12 @@ get '/contacts' do
   "Contact us"
 end
 
-get '/cat' do
+get '/random-cat' do
+  @name = ["Abdul", "Maria", "James", "Batman"].sample
   erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @name = params[:name]
 end
